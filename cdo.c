@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <dirent.h> // Include the dirent.h header for directory-related functions
 
 #define MAX_COMMAND_LENGTH 100
 #define MAX_FILE_CONTENT_LENGTH 1000

@@ -29,3 +29,6 @@ Ping a subnet to retrive data.
 
 9. v
 Get version data
+
+10. start
+starts up a script

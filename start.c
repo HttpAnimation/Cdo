@@ -23,6 +23,7 @@ void start_command(const char *script) {
         line[strcspn(line, "\n")] = '\0';
 
         // Execute the command
+        printf("Executing: %s\n", line);
         system(line);
     }
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
-#include <signal.h> // Include the signal.h header for signal handling
+#include <signal.h>
 
 #ifdef _WIN32
     #define CLEAR_SCREEN_COMMAND "cls"

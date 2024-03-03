@@ -3,8 +3,11 @@
 #include <string.h>
 #include "commands.h"
 
-// Declare execute_command function
-void execute_command(const char *command);
+void execute_command(const char *command) {
+    // Implement the logic to execute a command here
+    // For demonstration purposes, you can simply print the command
+    printf("Executing command: %s\n", command);
+}
 
 void start_command(const char *script) {
     // Check if script is provided

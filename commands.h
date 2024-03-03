@@ -10,6 +10,6 @@ void exit_command();
 void host_command(const char *command);
 void help_command();
 void mkdir_command(const char *directory_name);
-void rm_command(const char *path); // Add rm command prototype
+void rm_command(const char *flag, const char *path); // Update rm command prototype
 
 #endif /* COMMANDS_H */

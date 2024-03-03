@@ -86,3 +86,10 @@ PING google.com (142.250.176.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 35.433/36.581/38.411/1.137 ms
 CDo> 
 ```
+
+## v
+Short for version, v will read out your version.
+```cdo
+Cdo> v
+Version is 69 - nice
+```

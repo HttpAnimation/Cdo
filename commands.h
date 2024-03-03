@@ -8,5 +8,6 @@ void ls_command();
 void clear_command();
 void exit_command();
 void host_command(const char *command);
+void help_command();
 
 #endif /* COMMANDS_H */

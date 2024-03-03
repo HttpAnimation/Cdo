@@ -17,3 +17,6 @@ Says back a message so like you say hi to me and I say hi back.
 
 5. exit
 Kills me :(. 
+
+6. mkdir
+Makes a dir.

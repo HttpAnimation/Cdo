@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/stat.h>
 #include "commands.h"
 
 void mkdir_command(const char *directory_name) {

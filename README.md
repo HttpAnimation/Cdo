@@ -39,3 +39,10 @@ Exits the script into the host os
 Cdo> exit
 $/
 ```
+
+## host
+Allows you to run host commands
+```cdo
+Cdo> host neofetch
+Pretend theres a neofetch command here it would not copy write
+```

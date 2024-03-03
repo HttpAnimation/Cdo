@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <sys/stat.h>
 #include "commands.h"
 
 void rm_command(const char *path) {
@@ -12,6 +13,13 @@ void rm_command(const char *path) {
         // Remove the directory and its contents recursively
         status = system("rm -rf folder");
     } else {
+        // Check if the path is a directory
+        struct stat st;
+        if (stat(path, &st) == 0 && S_ISDIR(st.st_mode)) {
+            printf("Error: Specify -folder to remove a directory.\n");
+            return;
+        }
+
         // Remove the file
         status = remove(path);
     }

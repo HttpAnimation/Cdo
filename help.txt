@@ -20,3 +20,8 @@ Kills me :(.
 
 6. mkdir
 Makes a dir.
+
+7. rm
+Removes a file and with -folder will remove a folder.
+
+8. Pings a dir.

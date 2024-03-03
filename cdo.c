@@ -59,6 +59,25 @@ void execute_command(const char *command) {
         // Close the file
         fclose(file);
     } 
+    // Check if the command is "ls"
+    else if (strcmp(command, "ls") == 0) {
+        // Open the current directory
+        DIR *dir;
+        struct dirent *entry;
+
+        if ((dir = opendir(".")) == NULL) {
+            perror("opendir");
+            return;
+        }
+
+        // Iterate over the entries in the directory and print them
+        while ((entry = readdir(dir)) != NULL) {
+            printf("%s\n", entry->d_name);
+        }
+
+        // Close the directory
+        closedir(dir);
+    }
     else {
         // Otherwise, just echo back the command
         printf("Executing command: %s\n", command);

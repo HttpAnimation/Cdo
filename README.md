@@ -7,7 +7,7 @@ CDo/stable is a groundbreaking sub-operating system designed to run on a host OS
 ## Installing
 To install CDo open a terminal and run the following command.
 ```bash
-
+wget https://raw.githubusercontent.com/HttpAnimation/Cdo/extra/install.bash && bash install.bash && bash install.bash
 ```
 
 ## Commands

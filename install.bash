@@ -1,0 +1,1 @@
+git clone -b stable https://github.com/HttpAnimation/Cdo.git

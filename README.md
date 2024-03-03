@@ -1,5 +1,5 @@
 # Cdo/stable
-A template I use
+A new type of os called a sub-os made to be ran on a host then be able to pick and byte data that won't effect the host os.
 
 # Commands
 

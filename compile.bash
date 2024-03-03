@@ -16,7 +16,7 @@ compile_CDo() {
     gcc -c v.c -o v.o
     gcc -c start.c -o start.o
     # Link object files to create the executable
-    gcc main.o v.o ping.o start.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o -o Cdo
+    gcc main.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o ping.o v.o start.o -o Cdo
 }
 
 # Check if the -c flag is provided

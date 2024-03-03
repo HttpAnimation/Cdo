@@ -16,4 +16,7 @@ void v_command() {
 
     // Close the file
     fclose(file);
+
+    // Add a newline character after printing the file contents
+    printf("\n");
 }

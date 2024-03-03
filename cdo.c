@@ -28,7 +28,12 @@ int main() {
 }
 
 void execute_command(const char *command) {
-    // Here, you can extend this function to handle various commands
-    // For simplicity, let's just echo back the command
-    printf("Executing command: %s\n", command);
+    // Check if the command starts with "echo"
+    if (strncmp(command, "echo ", 5) == 0) {
+        // If so, echo back the text after "echo"
+        printf("%s\n", command + 5); // Print starting from the 6th character (after "echo ")
+    } else {
+        // Otherwise, just echo back the command
+        printf("Executing command: %s\n", command);
+    }
 }

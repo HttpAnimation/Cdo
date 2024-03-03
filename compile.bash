@@ -12,8 +12,9 @@ gcc -c help.c -o help.o
 gcc -c mkdir.c -o mkdir.o
 gcc -c rm.c -o rm.o
 gcc -c ping.c -o ping.o
+gcc -c v.c -o v.o
 # Link object files to create the executable
-gcc main.o ping.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o -o Cdo
+gcc main.o v.o ping.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o -o Cdo
 
 # Optionally, you can remove the intermediate object files if you want
 # rm *.o

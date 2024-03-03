@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <dirent.h>
 
 #ifdef _WIN32
     #define CLEAR_SCREEN_COMMAND "cls"

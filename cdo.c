@@ -3,6 +3,7 @@
 #include <string.h>
 
 #define MAX_COMMAND_LENGTH 100
+#define MAX_FILE_CONTENT_LENGTH 1000
 
 // Function prototypes
 void execute_command(const char *command);
@@ -32,7 +33,33 @@ void execute_command(const char *command) {
     if (strncmp(command, "echo ", 5) == 0) {
         // If so, echo back the text after "echo"
         printf("%s\n", command + 5); // Print starting from the 6th character (after "echo ")
-    } else {
+    } 
+    // Check if the command starts with "read"
+    else if (strncmp(command, "read ", 5) == 0) {
+        // Get the filename
+        const char *filename = command + 5;
+
+        // Open the file for reading
+        FILE *file = fopen(filename, "r");
+        if (file == NULL) {
+            printf("Error: Unable to open file '%s'\n", filename);
+            return;
+        }
+
+        // Read the contents of the file
+        char file_content[MAX_FILE_CONTENT_LENGTH];
+        size_t bytes_read = fread(file_content, 1, MAX_FILE_CONTENT_LENGTH, file);
+
+        // Null-terminate the string
+        file_content[bytes_read] = '\0';
+
+        // Print the contents of the file
+        printf("%s\n", file_content);
+
+        // Close the file
+        fclose(file);
+    } 
+    else {
         // Otherwise, just echo back the command
         printf("Executing command: %s\n", command);
     }

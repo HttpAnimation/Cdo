@@ -11,5 +11,5 @@ git clone -b gh-pages https://github.com/HttpAnimation/Cdo.git
 mv Cdo gh-pages
 git clone -b gitter https://github.com/HttpAnimation/Cdo.git
 mv Cdo gitter
-git clone -b main https://github.com/HttpAnimation/NAME.git
+git clone -b main https://github.com/HttpAnimation/Cdo.git
 mv Cdo main

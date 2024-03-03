@@ -14,3 +14,15 @@ This will repeat a message sent to the app
 Cdo> echo Hello, World!
 Hello, World!
 ```
+
+## ls
+This is will print current files in the dir enterd.
+```cdo
+Cdo> ls
+file 1
+folder 1
+file 2
+file 3
+...
+file 69
+```

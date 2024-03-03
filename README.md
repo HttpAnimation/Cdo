@@ -32,3 +32,10 @@ Clears the console.
 ```cdo
 Cdo> clear
 ```
+
+## exit
+Exits the script into the host os
+```cdo
+Cdo> exit
+$/
+```

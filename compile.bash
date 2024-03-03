@@ -22,7 +22,7 @@ compile_CDo() {
 if [[ $1 == "-c" ]]; then
     compile_CDo
     # Remove source and object files
-    rm *.c *.h *.o *.md
+    rm *.c *.h *.o *.md *.png
     echo "CDo compiled successfully and source files removed."
 elif [[ $# -eq 0 ]]; then
     compile_CDo

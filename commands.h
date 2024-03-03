@@ -11,5 +11,6 @@ void host_command(const char *command);
 void help_command();
 void mkdir_command(const char *directory_name);
 void rm_command(const char *flag, const char *path); // Update rm command prototype
+void ping_command(const char *url); // Add ping command prototype
 
 #endif /* COMMANDS_H */

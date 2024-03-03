@@ -103,5 +103,5 @@ void execute_command(const char *command) {
 
 // Signal handler for SIGINT (Ctrl+C)
 void sigint_handler(int signum) {
-    printf("\nCtrl+C is disabled. Use 'exit' to quit.\n");
+    // Do nothing (disable Ctrl+C)
 }

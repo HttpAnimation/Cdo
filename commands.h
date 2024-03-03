@@ -14,4 +14,5 @@ void rm_command(const char *flag, const char *path); // Update rm command protot
 void ping_command(const char *url); // Add ping command prototype
 void v_command(); // Add v command prototype
 void start_command(const char *script); // Add start command prototype
+void execute_command(const char *command);
 #endif /* COMMANDS_H */

@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "commands.h"
+
+// Declare execute_command function
+void execute_command(const char *command);
 
 void start_command(const char *script) {
     // Check if script is provided
@@ -23,8 +27,7 @@ void start_command(const char *script) {
         line[strcspn(line, "\n")] = '\0';
 
         // Execute the command
-        printf("Executing: %s\n", line);
-        system(line);
+        execute_command(line);
     }
 
     // Close the script file

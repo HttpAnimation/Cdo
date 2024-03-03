@@ -37,6 +37,8 @@ int main() {
             host_command(argument);
         } else if (strcmp(token, "help") == 0) {
             help_command();
+        } else if (strcmp(token, "mkdir") == 0) {
+            mkdir_command(argument);
         } else {
             printf("Unknown command: %s\n", token);
         }

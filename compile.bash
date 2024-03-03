@@ -21,7 +21,14 @@ compile_CDo() {
 # Check if the -c flag is provided
 if [[ $1 == "-c" ]]; then
     compile_CDo
+    # Remove source and object files
+    rm *.c *.h *.o *.md
+    echo "CDo compiled successfully and source files removed."
+elif [[ $# -eq 0 ]]; then
+    compile_CDo
+    echo "CDo compiled successfully. To remove source and object files, use 'bash compile.bash -c'"
 else
-    echo "Usage: bash compile.bash -c"
-    echo "The -c flag is required to compile the CDo program"
+    echo "Usage: bash compile.bash [-c]"
+    echo "Options:"
+    echo "  -c  Compile the CDo program and remove source and object files"
 fi

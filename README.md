@@ -26,3 +26,9 @@ file 3
 ...
 file 69
 ```
+
+## clear
+Clears the console.
+```cdo
+Cdo> clear
+```

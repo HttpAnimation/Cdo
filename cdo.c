@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
+#include <signal.h> // Include the signal.h header for signal handling
 
 #ifdef _WIN32
     #define CLEAR_SCREEN_COMMAND "cls"
@@ -14,9 +15,13 @@
 
 // Function prototypes
 void execute_command(const char *command);
+void sigint_handler(int signum); // Signal handler function prototype
 
 int main() {
     char command[MAX_COMMAND_LENGTH];
+
+    // Register the signal handler for SIGINT
+    signal(SIGINT, sigint_handler);
 
     while (1) {
         printf("CDo> ");
@@ -94,4 +99,9 @@ void execute_command(const char *command) {
         // Otherwise, just echo back the command
         printf("Executing command: %s\n", command);
     }
+}
+
+// Signal handler for SIGINT (Ctrl+C)
+void sigint_handler(int signum) {
+    printf("\nCtrl+C is disabled. Use 'exit' to quit.\n");
 }

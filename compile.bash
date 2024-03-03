@@ -10,8 +10,9 @@ gcc -c exit.c -o exit.o
 gcc -c host.c -o host.o
 gcc -c help.c -o help.o
 gcc -c mkdir.c -o mkdir.o
+gcc -c rm.c -o rm.o
 # Link object files to create the executable
-gcc main.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o -o CDo
+gcc main.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o -o CDo
 
 # Optionally, you can remove the intermediate object files if you want
 # rm *.o

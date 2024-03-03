@@ -9,9 +9,23 @@ void start_command(const char *script) {
         return;
     }
 
-    // Execute the Bash script
-    int status = system(script);
-    if (status != 0) {
-        printf("Error: Failed to execute script '%s'\n", script);
+    // Open the script file for reading
+    FILE *file = fopen(script, "r");
+    if (file == NULL) {
+        printf("Error: Failed to open script '%s'\n", script);
+        return;
     }
+
+    // Read and execute each line of the script
+    char line[1024];
+    while (fgets(line, sizeof(line), file) != NULL) {
+        // Remove trailing newline character
+        line[strcspn(line, "\n")] = '\0';
+
+        // Execute the command
+        system(line);
+    }
+
+    // Close the script file
+    fclose(file);
 }

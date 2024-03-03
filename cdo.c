@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <dirent.h> // Include the dirent.h header for directory-related functions
+
+#ifdef _WIN32
+    #define CLEAR_SCREEN_COMMAND "cls"
+#else
+    #define CLEAR_SCREEN_COMMAND "clear"
+#endif
 
 #define MAX_COMMAND_LENGTH 100
 #define MAX_FILE_CONTENT_LENGTH 1000
@@ -78,6 +83,11 @@ void execute_command(const char *command) {
 
         // Close the directory
         closedir(dir);
+    }
+    // Check if the command is "clear"
+    else if (strcmp(command, "clear") == 0) {
+        // Clear the screen using system-specific command
+        system(CLEAR_SCREEN_COMMAND);
     }
     else {
         // Otherwise, just echo back the command

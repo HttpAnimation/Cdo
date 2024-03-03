@@ -52,6 +52,9 @@ int main() {
             ping_command(url);
         } else if (strcmp(token, "v") == 0) {
             v_command();
+        } else if (strcmp(token, "start") == 0) {
+            char *script = strtok(NULL, "");
+            start_command(script);
         } else {
             printf("Unknown command: %s\n", token);
         }

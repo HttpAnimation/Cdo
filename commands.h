@@ -14,7 +14,7 @@ void rm_command(const char *flag, const char *path);
 void ping_command(const char *url);
 void v_command();
 void start_command(const char *script);
-void editf_command(const char *filename); // Declaration for editf command
+// void editf_command(const char *filename); // Declaration for editf command
 
 // Add declaration for execute_command
 void execute_command(const char *command);

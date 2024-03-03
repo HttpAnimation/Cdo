@@ -17,13 +17,14 @@ compile_CDo() {
     gcc -c start.c -o start.o
     # Link object files to create the executable
     gcc main.o echo.o read.o ls.o clear.o exit.o host.o help.o mkdir.o rm.o ping.o v.o start.o -o Cdo
+    rm *.o
 }
 
 # Check if the -c flag is provided
 if [[ $1 == "-c" ]]; then
     compile_CDo
     # Remove source and object files
-    rm *.c *.h *.o *.md *.png *.bash
+    rm *.c *.h *.md *.png *.bash
     echo "CDo compiled successfully and source files removed."
 elif [[ $# -eq 0 ]]; then
     compile_CDo

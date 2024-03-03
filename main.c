@@ -55,9 +55,6 @@ int main() {
         } else if (strcmp(token, "start") == 0) {
             char *script = strtok(NULL, "");
             start_command(script);
-        } else if (strcmp(token, "editf") == 0) {
-            char *filename = strtok(NULL, "");
-            editf_command(filename);
         } else {
             printf("Unknown command: %s\n", token);
         }

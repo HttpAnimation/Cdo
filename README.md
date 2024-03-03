@@ -4,6 +4,12 @@ CDo/stable is a groundbreaking sub-operating system designed to run on a host OS
 
 ![Usage](nEtYpNq.png)
 
+## Installing
+To install CDo open a terminal and run the following command.
+```bash
+
+```
+
 ## Commands
 
 ### read

@@ -1,95 +1,86 @@
-# Cdo/stable
-A new type of os called a sub-os made to be ran on a host then be able to pick and byte data that won't effect the host os.
+# CDo/stable
+
+CDo/stable is a groundbreaking sub-operating system designed to run on a host OS while allowing users to manipulate data independently of the host system. With its innovative features and user-friendly interface, CDo/stable provides a seamless experience for managing files and executing commands without affecting the underlying host OS.
 
 ![Usage](nEtYpNq.png)
 
-# Commands
+## Commands
 
-## read
-The read command will read out a file similer to cat on unix
+### read
+The `read` command functions similarly to `cat` on Unix systems, allowing users to display the contents of a file.
 ```cdo
 CDo> read compile.bash
 gcc -o Cdo cdo.c
 ```
 
-## echo
-This will repeat a message sent to the app
+### echo
+The `echo` command repeats a message sent to the application.
 ```cdo
-Cdo> echo Hello, World!
+CDo> echo Hello, World!
 Hello, World!
 ```
 
-## ls
-This is will print current files in the dir enterd.
+### ls
+Use the `ls` command to list the files in the current directory.
 ```cdo
-Cdo> ls
-file 1
-folder 1
-file 2
-file 3
+CDo> ls
+file1
+folder1
+file2
+file3
 ...
-file 69
+file69
 ```
 
-## clear
-Clears the console.
+### clear
+The `clear` command clears the console.
 ```cdo
-Cdo> clear
+CDo> clear
 ```
 
-## exit
-Exits the script into the host os
+### exit
+`exit` allows you to exit the CDo environment and return to the host OS.
 ```cdo
-Cdo> exit
+CDo> exit
 $/
 ```
 
-## host
-Allows you to run host commands
+### host
+Execute host commands using the `host` command.
 ```cdo
-Cdo> host neofetch
-Pretend theres a neofetch command here it would not copy write
+CDo> host neofetch
+[Output of neofetch command would appear here]
 ```
 
-## help
-Shows a help message.
+### help
+Display a help message with the `help` command.
 ```cdo
-Cdo> help
-message about help here
+CDo> help
+[Message about help would appear here]
 ```
 
-## mkdir
-Makes a dir.
+### mkdir
+Create a new directory using the `mkdir` command.
 ```cdo
-Cdo> mkdir folderone
-Cdo> ls
+CDo> mkdir folderone
+CDo> ls
 ...
 folderone
 ...
 ```
 
-## ping
-Pings a url to get data.
+### ping
+Ping a URL to retrieve data.
 ```cdo
 CDo> ping google.com
 Error: Invalid URL format.
 CDo> ping https://google.com
-Pinging google.com...
-PING google.com (142.250.176.14) 56(84) bytes of data.
-64 bytes from lax17s51-in-f14.1e100.net (142.250.176.14): icmp_seq=1 ttl=117 time=35.4 ms
-64 bytes from lax17s51-in-f14.1e100.net (142.250.176.14): icmp_seq=2 ttl=117 time=38.4 ms
-64 bytes from lax17s51-in-f14.1e100.net (142.250.176.14): icmp_seq=3 ttl=117 time=36.6 ms
-64 bytes from lax17s51-in-f14.1e100.net (142.250.176.14): icmp_seq=4 ttl=117 time=35.9 ms
-
---- google.com ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3004ms
-rtt min/avg/max/mdev = 35.433/36.581/38.411/1.137 ms
-CDo> 
+[Output of ping command would appear here]
 ```
 
-## v
-Short for version, v will read out your version.
+### v
+Check the version of CDo/stable using the `v` command.
 ```cdo
-Cdo> v
+CDo> v
 Version is 69 - nice
 ```

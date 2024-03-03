@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "commands.h"
 
@@ -49,6 +50,8 @@ int main() {
         } else if (strcmp(token, "ping") == 0) {
             char *url = strtok(NULL, "");
             ping_command(url);
+        } else if (strcmp(token, "v") == 0) {
+            v_command();
         } else {
             printf("Unknown command: %s\n", token);
         }

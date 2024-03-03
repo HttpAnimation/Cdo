@@ -13,3 +13,5 @@ git clone -b gitter https://github.com/HttpAnimation/Cdo.git
 mv Cdo gitter
 git clone -b main https://github.com/HttpAnimation/Cdo.git
 mv Cdo main
+git clone -b UITest https://github.com/HttpAnimation/Cdo.git
+mv Cdo UITest

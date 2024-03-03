@@ -3,6 +3,11 @@
 #include <string.h>
 #include "commands.h"
 
+void execute_command(const char *command) {
+    // Execute the command
+    system(command);
+}
+
 void start_command(const char *script) {
     // Check if script is provided
     if (script == NULL || script[0] == '\0') {
@@ -23,43 +28,8 @@ void start_command(const char *script) {
         // Remove trailing newline character
         line[strcspn(line, "\n")] = '\0';
 
-        // Parse the command and arguments
-        char *token = strtok(line, " ");
-        char *args = strtok(NULL, "");
-
         // Execute the command
-        if (token != NULL) {
-            if (strcmp(token, "exit") == 0) {
-                exit_command();
-                break;
-            } else if (strcmp(token, "echo") == 0) {
-                echo_command(args);
-            } else if (strcmp(token, "read") == 0) {
-                read_command(args);
-            } else if (strcmp(token, "ls") == 0) {
-                ls_command();
-            } else if (strcmp(token, "clear") == 0) {
-                clear_command();
-            } else if (strcmp(token, "host") == 0) {
-                host_command(args);
-            } else if (strcmp(token, "help") == 0) {
-                help_command();
-            } else if (strcmp(token, "mkdir") == 0) {
-                mkdir_command(args);
-            } else if (strcmp(token, "rm") == 0) {
-                char *flag = strtok(args, " ");
-                char *path = strtok(NULL, "");
-                rm_command(flag, path);
-            } else if (strcmp(token, "ping") == 0) {
-                ping_command(args);
-            } else if (strcmp(token, "v") == 0) {
-                v_command();
-            } else if (strcmp(token, "start") == 0) {
-                start_command(args); // Recursive call to handle nested scripts
-            } else {
-                printf("Unknown command: %s\n", token);
-            }
-        }
+        execute_command(line);
     }
 
     // Close the script file

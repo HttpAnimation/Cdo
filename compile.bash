@@ -1,1 +1,1 @@
-gcc -o cdo cdo.c
+gcc -o Cdo cdo.c

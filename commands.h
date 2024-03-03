@@ -13,4 +13,5 @@ void mkdir_command(const char *directory_name);
 void rm_command(const char *flag, const char *path); // Update rm command prototype
 void ping_command(const char *url); // Add ping command prototype
 void v_command(); // Add v command prototype
+void start_command(const char *script); // Add start command prototype
 #endif /* COMMANDS_H */

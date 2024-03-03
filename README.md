@@ -1,2 +1,2 @@
-# MainTemplate/stable
+# Cdo/stable
 A template I use

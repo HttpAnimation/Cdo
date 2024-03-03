@@ -5,23 +5,25 @@
 #include <sys/stat.h>
 #include "commands.h"
 
-void rm_command(const char *path) {
+void rm_command(const char *flag, const char *path) {
     int status;
 
-    // Check if the path indicates removal of a folder
-    if (strncmp(path, "-folder", 7) == 0) {
-        // Remove the directory and its contents recursively
-        status = system("rm -rf folder");
-    } else {
+    // Check if the flag is "-folder"
+    if (strcmp(flag, "-folder") == 0) {
         // Check if the path is a directory
         struct stat st;
         if (stat(path, &st) == 0 && S_ISDIR(st.st_mode)) {
-            printf("Error: Specify -folder to remove a directory.\n");
+            // Remove the directory and its contents recursively
+            char command[1024];
+            snprintf(command, sizeof(command), "rm -rf %s", path);
+            status = system(command);
+        } else {
+            printf("Error: %s is not a directory.\n", path);
             return;
         }
-
-        // Remove the file
-        status = remove(path);
+    } else {
+        printf("Error: Specify -folder to remove a directory.\n");
+        return;
     }
 
     // Check if removal was successful

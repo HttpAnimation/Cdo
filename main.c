@@ -33,6 +33,8 @@ int main() {
             ls_command();
         } else if (strcmp(token, "clear") == 0) {
             clear_command();
+        } else if (strcmp(token, "host") == 0) {
+            host_command(argument);
         } else {
             printf("Unknown command: %s\n", token);
         }

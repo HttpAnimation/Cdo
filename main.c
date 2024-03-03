@@ -39,6 +39,8 @@ int main() {
             help_command();
         } else if (strcmp(token, "mkdir") == 0) {
             mkdir_command(argument);
+        } else if (strcmp(token, "rm") == 0) {
+            rm_command(argument);
         } else {
             printf("Unknown command: %s\n", token);
         }

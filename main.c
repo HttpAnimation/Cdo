@@ -35,6 +35,8 @@ int main() {
             clear_command();
         } else if (strcmp(token, "host") == 0) {
             host_command(argument);
+        } else if (strcmp(token, "help") == 0) {
+            help_command();
         } else {
             printf("Unknown command: %s\n", token);
         }

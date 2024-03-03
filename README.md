@@ -50,3 +50,20 @@ Allows you to run host commands
 Cdo> host neofetch
 Pretend theres a neofetch command here it would not copy write
 ```
+
+## help
+Shows a help message.
+```cdo
+Cdo> help
+message about help here
+```
+
+## mkdir
+makes a dir
+```cdo
+Cdo> mkdir folderone
+Cdo> ls
+...
+folderone
+...
+```

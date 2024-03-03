@@ -44,8 +44,11 @@ int main() {
             mkdir_command(argument);
         } else if (strcmp(token, "rm") == 0) {
             char *flag = strtok(NULL, " ");
-            char *path = strtok(NULL, " ");
+            char *path = strtok(NULL, "");
             rm_command(flag, path);
+        } else if (strcmp(token, "ping") == 0) {
+            char *url = strtok(NULL, "");
+            ping_command(url);
         } else {
             printf("Unknown command: %s\n", token);
         }

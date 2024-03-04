@@ -1,2 +1,2 @@
-# MainTemplate/blank
+# Cdo/blank
 A template I use

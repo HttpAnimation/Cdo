@@ -1,7 +1,8 @@
 body {
-    background-color: darkgray;
+    background-color: lightblue;
 }
 
 h1 {
     font-weight: bold;
+    background-color: lightcoral;
 }

@@ -6,6 +6,10 @@ header {
     padding-top: 50px;
 }
 
+body {
+    
+}
+
 header::before {
     content: "";
     position: absolute;

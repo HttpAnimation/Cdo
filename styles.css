@@ -4,6 +4,8 @@ header {
     text-align: center;
     color: white;
     padding-top: 50px;
+    transition: all 0.5s ease; /* Adding transition for smooth animation */
+    transform: translateY(-50px); /* Initial position, moving it up */
 }
 
 body {
@@ -28,4 +30,9 @@ header::before {
     margin-bottom: 0; 
     padding-top: 10px;
     color: black;
+}
+
+/* Adding a class for the drop-down animation */
+header.drop-down {
+    transform: translateY(0); /* Move header down */
 }

@@ -63,3 +63,6 @@ header.drop-down {
     order: 3; /* Adjust order to position accordingly */
 }
 
+.h1 {
+    font-weight: bold;
+}

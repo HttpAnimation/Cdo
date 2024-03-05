@@ -59,10 +59,6 @@ header.drop-down {
     order: 2; /* Adjust order to position accordingly */
 }
 
-.right {
-    order: 3; /* Adjust order to position accordingly */
-}
-
 .h1 {
     font-weight: bold;
 }

@@ -1,2 +1,2 @@
 # Cdo/gh-pages
-The webiste you can visit [here](https://httpanimation.github.io/Cdo/).
+This branch servers the files for the webiste you can visit [here](https://httpanimation.github.io/Cdo/).
